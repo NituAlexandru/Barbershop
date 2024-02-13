@@ -654,7 +654,121 @@ form .form-group {
   margin-right: 20px;
 }
 /* Media Query ----------------------------------- 
-Tablet--------------------------------------------*/
+/* Small devices -----------------------------------*/
+@media only screen and (max-width: 480px) {
+  .title {
+    font-size: 32px;
+    letter-spacing: 1.6px;
+  }
+  .hero-paragraph,
+  .services-prices-paragraph {
+    font-size: 12px;
+    letter-spacing: 0.28px;
+  }
+  .about {
+    padding: 20px;
+    gap: 20px;
+  }
+  .header-container {
+    padding: 15px 20px;
+  }
+  .services-prices {
+    padding: 15px 20px;
+    height: auto;
+  }
+  .prices-list li span {
+    font-size: 14px;
+    line-height: 185.7%;
+    letter-spacing: 0.28px;
+  }
+  .prices {
+    width: 100%;
+    padding: 5px;
+  }
+  .book-a-service-btn {
+    margin-top: 20px;
+  }
+  .why-us-section {
+    padding: 15px 20px;
+  }
+  .why-us-second-paragraph-mobile {
+    font-size: 14px;
+    line-height: 185.7%;
+    letter-spacing: 0.28px;
+  }
+  .why-us-list {
+    gap: 0;
+    margin-top: 0;
+  }
+  .feature {
+    padding: 0;
+  }
+  .why-us-list .feature:nth-child(2n) {
+    margin-top: 0;
+    margin-left: 120px;
+  }
+  .our-barbers-section {
+    padding: 15px 20px;
+  }
+  .barbers-list li picture,
+  .barbers-list li img {
+    width: 100%;
+  }
+  .motto-section {
+    width: 100%;
+    padding: 15px 20px;
+  }
+  .picture-container {
+    width: 100%;
+  }
+  .picture-container picture,
+  .picture-container img {
+    width: 100%;
+  }
+  .book-contacts {
+    width: 100%;
+  }
+  .booking-form {
+    padding: 15px 20px;
+  }
+  .form {
+    padding: 0;
+    width: 100%;
+  }
+  .contact-section {
+    padding: 15px 20px;
+  }
+  .contacts-big-container {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+  }
+  .contacts-address,
+  .link {
+    font-size: 14px;
+  }
+  .working-hours .contacts-container .contacts-paragraph {
+    margin-top: 17px;
+    font-size: 16px;
+  }
+  .working-hours p {
+    font-size: 14px;
+  }
+  .footer-container {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 12px;
+  }
+  .footer-media {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .footer-line {
+    display: none;
+  }
+}
+
+/*Tablet--------------------------------------------*/
 @media only screen and (min-width: 768px) {
   .slide:nth-child(1) {
     background-image: url("./images/slider-1-t.webp");
