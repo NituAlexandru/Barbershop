@@ -67,8 +67,9 @@ a {
   border: none;
 }
 .burger-menu:hover {
-  scale: 1.2;
+  transform: scale(1.2);
 }
+
 .custom-line {
   width: 1px;
   height: 60px;
@@ -248,7 +249,7 @@ a {
 .about-btn:hover,
 .book-a-service-btn:hover,
 .form-btn:hover {
-  scale: 1.2;
+  transform: scale(1.2);
 }
 /* Services and prices ---------------------------------------- */
 .services-prices {
@@ -473,7 +474,7 @@ a {
 .form-row {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
 }
 .contacts-address {
   display: flex;
@@ -791,7 +792,7 @@ form .form-group {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    max-width: 768px-609px;
+    max-width: 159px;
   }
   .global-aside-links {
     display: flex;
@@ -865,6 +866,12 @@ form .form-group {
     .services-prices {
       background-image: url("./images/services-bg-t-2x.webp");
     }
+  }
+  .book-a-service-btn {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
   }
   .services-prices-title {
     font-size: 42px;
