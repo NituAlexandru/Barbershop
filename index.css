@@ -58,6 +58,45 @@ a {
 .logo {
   cursor: pointer;
 }
+.hidden {
+  display: none;
+}
+
+.mobile-backdrop {
+  display: flex;
+  position: fixed;
+  width: 65%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0);
+  z-index: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 100px 20px 80px 20px;
+}
+.mobile-backdrop.hidden {
+  display: none;
+}
+.backdrop-close-btn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: none;
+  cursor: pointer;
+}
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mobile-backdrop .global-aside-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .burger-menu {
   width: 40px;
   height: 40px;
