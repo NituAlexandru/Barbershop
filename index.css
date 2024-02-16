@@ -66,31 +66,74 @@ a {
   display: flex;
   position: fixed;
   width: 65%;
-  height: 100%;
+  height: 80%;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0);
+  background-color: #191c26;
   z-index: 1;
   flex-direction: column;
   justify-content: space-between;
-  padding: 100px 20px 80px 20px;
+  padding: 100px 20px 80px 50px;
+  border-radius: 0 0 0 150px;
+  transition: transform 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  transform: translateX(100%);
+  visibility: hidden;
+  box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.7);
+  background: url("./images/contacts-background-m.webp") #191c26 no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-.mobile-backdrop.hidden {
-  display: none;
+
+.mobile-backdrop:not(.hidden) {
+  transform: translateX(0);
+  visibility: visible;
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .mobile-backdrop {
+    background-image: url("./images/contacts-background-m-2x.webp");
+  }
+}
+
 .backdrop-close-btn {
   width: 40px;
   height: 40px;
   position: absolute;
   top: 20px;
-  left: 20px;
+  left: 40px;
   border: none;
   cursor: pointer;
+  background: none;
+  transition: transform 0.8s ease;
+}
+.backdrop-close-btn:hover svg {
+  animation: rotateAndScale 0.8s ease;
+}
+@keyframes rotateAndScale {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
 }
 .mobile-nav-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+}
+.mobile-nav-link {
+  display: inline-block;
+  color: #fff;
+  transition: transform 0.4s ease;
+}
+.mobile-nav-link:hover {
+  transform: scale(1.3);
 }
 .mobile-backdrop .global-aside-links {
   display: flex;
