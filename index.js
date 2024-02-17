@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Slideshow ----------------------------------------------
   let currentSlide = 0;
   const slides = document.querySelectorAll(".slide");
 
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlide(currentSlide);
   }, 4000);
 
+  // Opening and closing the mobile menu ---------------------------
   function openNav() {
     const menu = document.getElementById("mobile-backdrop");
     if (menu) menu.classList.remove("hidden");
@@ -25,17 +27,34 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const burgerMenuButton = document.querySelector(".burger-menu");
-  if (burgerMenuButton) burgerMenuButton.addEventListener("click", openNav);
+  if (burgerMenuButton) {
+    burgerMenuButton.addEventListener("click", function (event) {
+      openNav();
+      event.stopPropagation();
+    });
+  }
 
   const closeButton = document.querySelector(".backdrop-close-btn");
-  if (closeButton) closeButton.addEventListener("click", closeNav);
-
+  if (closeButton) {
+    closeButton.addEventListener("click", function (event) {
+      closeNav();
+      event.stopPropagation();
+    });
+  }
+  // Closeing the menu with escape key and clicking outside the menu
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
       closeNav();
     }
   });
+  window.addEventListener("click", function (event) {
+    const menu = document.getElementById("mobile-backdrop");
+    if (menu && !menu.contains(event.target)) {
+      closeNav();
+    }
+  });
 
+  // closing the menu when a link is clicked
   const navLinks = document.querySelectorAll(
     ".mobile-nav-link, .global-aside-links .link"
   );
