@@ -9,12 +9,26 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  position: relative;
 }
 ul {
   list-style-type: none;
 }
 a {
   text-decoration: none;
+}
+#back-to-top-btn {
+  border: solid 2px #ff6c00;
+  color: #ff6c00;
+  background-color: transparent;
+  position: fixed;
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  bottom: 50px;
+  cursor: pointer;
+  border-radius: 10px;
 }
 .container {
   width: 480px;
@@ -251,9 +265,7 @@ a {
   flex-direction: column;
   gap: 20px;
 }
-.about {
-  padding: 0;
-}
+
 .services-prices {
   margin: 0 auto;
 }
@@ -332,6 +344,11 @@ a {
   text-transform: uppercase;
   background-color: transparent;
   cursor: pointer;
+}
+.book-a-service-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about-btn {
   display: flex;
@@ -863,6 +880,10 @@ form .form-group {
 
 /*Tablet--------------------------------------------*/
 @media only screen and (min-width: 768px) {
+  #back-to-top-btn {
+    right: 40px;
+    bottom: 50px;
+  }
   .slide:nth-child(1) {
     background-image: url("./images/slider-1-t.webp");
   }
@@ -1110,6 +1131,10 @@ form .form-group {
 
 /*Desktop-----------------------------------*/
 @media only screen and (min-width: 1280px) {
+  #back-to-top-btn {
+    right: 50px;
+    bottom: 100px;
+  }
   .slide:nth-child(1) {
     background-image: url("./images/slider-1-d.webp");
   }
